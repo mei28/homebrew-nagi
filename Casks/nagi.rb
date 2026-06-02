@@ -1,6 +1,6 @@
 cask "nagi" do
-  version "0.1.0"
-  sha256 "f01bee9f2cd987b7e41a2c593f232dc6c260788975304f8047499a0620ff3e36"
+  version "0.2.0"
+  sha256 "dc1a642c41239dc08f3d1f3b49b972f991d1a44f0a34d61d934f0c55fd0c3bf6"
 
   url "https://github.com/mei28/Nagi/releases/download/v#{version}/Nagi-#{version}.zip",
       verified: "github.com/mei28/Nagi/"
