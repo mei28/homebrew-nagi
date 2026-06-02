@@ -8,14 +8,16 @@ Homebrew tap for [Nagi (凪)](https://github.com/mei28/Nagi) — a flow-time wor
 brew install --cask mei28/nagi/nagi
 ```
 
-Nagi is distributed unsigned (ad-hoc), so Gatekeeper may block it on first launch.
-If so, install without the quarantine attribute:
+Nagi is distributed unsigned (ad-hoc), so macOS quarantines it and Gatekeeper
+blocks the first launch. After installing, do one of:
 
-```sh
-brew install --cask --no-quarantine mei28/nagi/nagi
-```
+- Right-click `/Applications/Nagi.app` → **Open**, then confirm, **or**
+- System Settings → Privacy & Security → **Open Anyway**, **or**
+- clear the quarantine attribute, then open normally:
 
-Alternatively, right-click `/Applications/Nagi.app` and choose **Open** on first launch.
+  ```sh
+  xattr -dr com.apple.quarantine /Applications/Nagi.app
+  ```
 
 ## Upgrade / uninstall
 

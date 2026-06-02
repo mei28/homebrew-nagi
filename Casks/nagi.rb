@@ -12,8 +12,10 @@ cask "nagi" do
 
   app "Nagi.app"
 
-  # The app is unsigned (ad-hoc). Gatekeeper may block first launch; install with
-  # `--no-quarantine`, or right-click the app and choose Open.
+  # The app is unsigned (ad-hoc). macOS quarantines it, so Gatekeeper blocks the
+  # first launch. After install, right-click Nagi.app and choose Open, use
+  # System Settings > Privacy & Security > Open Anyway, or run:
+  #   xattr -dr com.apple.quarantine /Applications/Nagi.app
   zap trash: [
     "~/Library/Containers/com.waddlier.Nagi",
     "~/Library/Application Support/com.waddlier.Nagi",
